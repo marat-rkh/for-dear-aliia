@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Для любимой Алии ♡'
+theme = 'hello-friend'
+
+[params]
+    Logo.logoText = 'Открытка для любимой Алии'

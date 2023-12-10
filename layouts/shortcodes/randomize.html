@@ -1,0 +1,17 @@
+<script>
+  function setRandomImage() {
+    var postcards = ["1.jpeg", "2.jpeg"];
+    var imageElement = document.getElementById("postcard");
+    var srcLastSegment = imageElement.src.split("/").pop();
+    var currentPostcard = postcards.indexOf(srcLastSegment);
+    console.log(currentPostcard);
+    if (currentPostcard !== -1) {
+      postcards.splice(currentPostcard, 1);
+    }
+    const randomPostcard = Math.floor(Math.random() * postcards.length);
+    imageElement.src = postcards[randomPostcard];
+  }
+  window.onload = function(){   
+    setRandomImage();
+  };
+</script>
