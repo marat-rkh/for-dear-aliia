@@ -1,3 +1,9 @@
 {{ if .Get "src" }}
-  <img id="postcard" src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="cursor: pointer; {{ . | safeCSS }}" {{ end }} onclick="setRandomImage()"/>
+  <img 
+    id="postcard" 
+    src="{{ .Get "src" | safeURL }}" 
+    {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} 
+    class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" 
+    {{ with .Get "style" }} style="cursor: pointer; {{ . | safeCSS }}" {{ end }} 
+    onclick="setRandomImage()"/>
 {{ end }}
